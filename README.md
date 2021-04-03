@@ -4,7 +4,7 @@ The repository contains implementation of Data Structures and Algorithms in [Kot
 ### Get started
 Clone or download the repository and open it on your favorite IDE (Recommended IDE: [IntelliJ IDEA](https://www.jetbrains.com/idea/download/))
 ### Overview
-- Data Structures
+- [Data Structures](https://github.com/abdurakhmonoff/data-structures-and-algorithms-kotlin/tree/master/src/data_structures)
     - Arrays
     - Hash Tables
     - Linked Lists
@@ -12,7 +12,7 @@ Clone or download the repository and open it on your favorite IDE (Recommended I
     - Queues
     - Trees
     - Graphs
-- Algorithms
+- [Algorithms](https://github.com/abdurakhmonoff/data-structures-and-algorithms-kotlin/tree/master/src/algorithms)
     - Recursion
     - Sorting
         - Bubble Sort
@@ -25,7 +25,7 @@ Clone or download the repository and open it on your favorite IDE (Recommended I
         - Binary Search
         - BFS
         - DFS
-- Dynamic Programming
+- [Dynamic Programming](https://github.com/abdurakhmonoff/data-structures-and-algorithms-kotlin/tree/master/src/dynamic_programming)
     - Memoization
 ---
 *Contributions are appreciated*
