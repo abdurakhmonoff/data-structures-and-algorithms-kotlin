@@ -51,7 +51,7 @@ class DynamicArray(
                 length--
             }
         } else {
-            System.err.println("IndexOutOfBounds")
+            println("IndexOutOfBounds")
         }
     }
 

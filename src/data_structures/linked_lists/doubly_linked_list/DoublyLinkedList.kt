@@ -35,7 +35,7 @@ class DoublyLinkedList(value: Int) {
 
     fun insert(index: Int, value: Int) {
         if (index < 0 || index > length) {
-            System.err.println("Index Out Of Bounds For Length $length")
+            println("Index Out Of Bounds For Length $length")
         } else if (index == 0) {
             prepend(value)
         } else if (index == length) {
@@ -56,7 +56,7 @@ class DoublyLinkedList(value: Int) {
 
     fun remove(index: Int) {
         if (index < 0 || index > length) {
-            System.err.println("Index Out Of Bounds For Length $length")
+            println("Index Out Of Bounds For Length $length")
         } else if (index == 0) {
             head = head?.next
             head?.previous = null
