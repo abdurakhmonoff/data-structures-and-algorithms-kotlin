@@ -27,5 +27,3 @@ Clone or download the repository and open it on your favorite IDE (Recommended I
         - DFS
 - [Dynamic Programming](https://github.com/abdurakhmonoff/data-structures-and-algorithms-kotlin/tree/master/src/dynamic_programming)
     - Memoization
----
-*Contributions are appreciated*
