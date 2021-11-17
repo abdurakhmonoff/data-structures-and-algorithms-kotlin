@@ -1,4 +1,4 @@
-![DSA in Kotlin](images/dsa-kotlin-banner.png)
+![DSA in Kotlin](dsa-kotlin-banner.jpg)
 ## Data Structures and Algorithms in Kotlin
 The repository contains implementation of Data Structures and Algorithms in [Kotlin](https://kotlinlang.org/) programming language.
 ### Get started
