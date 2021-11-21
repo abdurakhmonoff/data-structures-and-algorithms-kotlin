@@ -1,0 +1,15 @@
+- Recursion
+    - Factorial (problem)
+    - Fibonacci (problem)
+    - Reverse string (problem)
+- Sorting
+    - Bubble Sort
+    - Selection Sort
+    - Insertion Sort
+    - Merge Sort
+    - Quick Sort
+- Searching
+    - Linear Search
+    - Binary Search
+    - BFS
+    - DFS
