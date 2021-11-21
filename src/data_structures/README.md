@@ -1,0 +1,21 @@
+- Arrays
+    - Implementation (problem)
+    - Merge sorted arrays (problem)
+    - Reverse string (problem)
+- Hash Tables
+    - First recurring character (problem)
+    - Implementation (problem)
+- Linked Lists
+    - Doubly linked list
+    - Singly linked list
+- Stacks
+    - Stack using array (problem)
+    - Stack using linked list (problem)
+- Queues
+    - Queue using linked list (problem)
+    - Queue using stacks (problem)
+- Trees
+    - Binary search tree
+    - Priority queue
+    - Trie
+- Graphs
