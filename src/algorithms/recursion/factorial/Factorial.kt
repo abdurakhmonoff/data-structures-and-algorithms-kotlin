@@ -1,12 +1,13 @@
 package algorithms.recursion.factorial
 
 class Factorial {
+    
     // recursive
     fun findFactorialRecursive(number: Int): Int {
         return if (number < 2)
             1
         else
-            number * findFactorialIterative(number - 1)
+            number * findFactorialRecursive(number - 1)
     }
 
     // iterative
@@ -24,7 +25,8 @@ class Factorial {
 }
 
 fun main() {
+
     val factorial = Factorial()
-    println(factorial.findFactorialIterative(5))
     println(factorial.findFactorialRecursive(5))
+    println(factorial.findFactorialIterative(5))
 }
