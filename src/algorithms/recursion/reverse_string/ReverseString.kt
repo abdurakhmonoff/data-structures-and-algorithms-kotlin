@@ -1,8 +1,28 @@
 package algorithms.recursion.reverse_string
 
 class ReverseString {
-    fun reverseStringIterative(string: String): String {
-        val charArray = string.toCharArray()
+
+    /**
+     * Returns the reverse of the given string using a recursive approach.
+     *
+     * @param str the string to reverse
+     * @return the reverse of the given string
+     */
+    fun reverseStringRecursive(str: String): String {
+        return if (str == "")
+            ""
+        else
+            reverseStringRecursive(str.substring(1)) + str[0]
+    }
+
+    /**
+     * Returns the reverse of the given string using an iterative approach.
+     *
+     * @param str the string to reverse
+     * @return the reverse of the given string
+     */
+    fun reverseStringIterative(str: String): String {
+        val charArray = str.toCharArray()
         for (i in 0 until charArray.size / 2) {
             val temp = charArray[i]
             charArray[i] = charArray[charArray.size - 1 - i]
@@ -10,18 +30,11 @@ class ReverseString {
         }
         return String(charArray)
     }
-
-    fun reverseStringRecursive(string: String): String {
-        return if (string == "")
-            ""
-        else
-            reverseStringRecursive(string.substring(1)) + string[0]
-    }
 }
 
 fun main() {
+
     val reverse = ReverseString()
-    val reversedString = reverse.reverseStringIterative("yoyo mastery")
-    println(reversedString)
     println(reverse.reverseStringRecursive("yoyo mastery"))
+    println(reverse.reverseStringIterative("yoyo mastery"))
 }

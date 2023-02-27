@@ -1,7 +1,25 @@
 package algorithms.recursion.fibonacci
 
 class Fibonacci {
-    // iterative
+
+    /**
+     * Returns the nth number in the Fibonacci sequence using a recursive approach.
+     *
+     * @param n the position of the number to retrieve (starting from 0)
+     * @return the nth number in the Fibonacci sequence
+     */
+    fun fibonacciRecursive(n: Int): Int {
+        if (n == 0) return 0
+        else if (n == 1 || n == 2) return 1
+        return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2)
+    }
+
+    /**
+     * Returns the nth number in the Fibonacci sequence using an iterative approach.
+     *
+     * @param n the position of the number to retrieve (starting from 0)
+     * @return the nth number in the Fibonacci sequence
+     */
     fun fibonacciIterative(n: Int): Int {
         return if (n == 0) {
             0
@@ -17,17 +35,11 @@ class Fibonacci {
             arr[1]
         }
     }
-
-    // recursive
-    fun fibonacciRecursive(n: Int): Int {
-        if (n == 0) return 0
-        else if (n == 1 || n == 2) return 1
-        return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2)
-    }
 }
 
 fun main() {
+
     val fibonacci = Fibonacci()
-    println(fibonacci.fibonacciIterative(5))
     println(fibonacci.fibonacciRecursive(5))
+    println(fibonacci.fibonacciIterative(5))
 }
