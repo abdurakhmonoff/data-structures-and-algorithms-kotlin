@@ -35,7 +35,7 @@ fun main() {
 
     val binarySearch = BinarySearch()
 
-    // Note: Binary search only works with only sorted arrays
+    // Note: Binary search works only with sorted arrays.
     val array = intArrayOf(10, 25, 32, 45, 55, 68)
     val result = binarySearch.binarySearch(array, 55)
     println(result)
