@@ -1,6 +1,8 @@
 ### Binary search
 
-This function performs a binary search on a sorted array of integers to find the index of a specified key. The algorithm works by repeatedly dividing the array in half and discarding the half that the key cannot be in, until the key is found or the entire array has been searched.
+This function performs a binary search on a sorted array of integers to find the index of a specified key. The algorithm
+works by repeatedly dividing the array in half and discarding the half that the key cannot be in, until the key is found
+or the entire array has been searched.
 
 ```kotlin
 fun binarySearch(arr: IntArray, key: Int): String {
@@ -8,7 +10,7 @@ fun binarySearch(arr: IntArray, key: Int): String {
     var first = 0
     var last = arr.size - 1
     var middle = (first + last) / 2
-    
+
     // Loop until the first index is greater than the last index
     while (first <= last) {
         when {
