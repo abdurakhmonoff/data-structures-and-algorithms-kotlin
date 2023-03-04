@@ -1,6 +1,6 @@
 ### Bubble sort
 
-This code implements a bubble sort algorithm in Kotlin for an array of integers. The algorithm works by iterating over
+This code implements a bubble sort algorithm for an array of integers. The algorithm works by iterating over
 the array and comparing adjacent elements. If the adjacent elements are not in the correct order, they are swapped. This
 process is repeated until the entire array is sorted. The outer loop iterates over the array indices, while the inner
 loop compares adjacent elements of the array and swaps them if they are in the wrong order.
