@@ -4,6 +4,7 @@ package data_structures.arrays.reverse_string
  * This function takes a String parameter and returns the reversed version of the input string.
  *
  * @param string String to reverse
+ * @return Reversed input string
  */
 private fun reverse(string: String): String {
     // Initialize an empty string
@@ -21,6 +22,7 @@ private fun reverse(string: String): String {
  * This function uses Kotlin built-in function called reversed().
  *
  * @param string String to reverse
+ * @return Reversed input string
  */
 private fun reverse2(string: String) = string.reversed()
 
