@@ -1,10 +1,18 @@
 package data_structures.linked_lists.singly_linked_list
 
+/**
+ * Implementation of a singly linked list data structure with basic operations.
+ */
 class LinkedList(value: Int) {
     private var head: Node? = Node(value)
     private var tail: Node? = head
     var length: Int = 1
 
+    /**
+     * Appends a new node with the given value to the end of the list.
+     *
+     * @param value the integer value to add to the list
+     */
     fun append(value: Int) {
         val newNode = Node(value)
         tail?.next = newNode
@@ -12,6 +20,11 @@ class LinkedList(value: Int) {
         length++
     }
 
+    /**
+     * Adds a new node with the given value to the beginning of the list.
+     *
+     * @param value the integer value to add to the list
+     */
     fun prepend(value: Int) {
         val newNode = Node(value)
         newNode.next = head
@@ -19,6 +32,11 @@ class LinkedList(value: Int) {
         length++
     }
 
+    /**
+     * Returns an array containing the values of all nodes in the list.
+     *
+     * @return an array containing the values of all nodes in the list
+     */
     fun printList(): IntArray {
         val myList = IntArray(length)
         var current: Node? = head
@@ -31,6 +49,12 @@ class LinkedList(value: Int) {
         return myList
     }
 
+    /**
+     * Inserts a new node with the given value at the specified index.
+     *
+     * @param index the index at which to insert the new node
+     * @param value the integer value to add to the list
+     */
     fun insert(index: Int, value: Int) {
         if (index < 0 || index > length) {
             println("Index Out Of Bounds For Length $length")
@@ -50,6 +74,11 @@ class LinkedList(value: Int) {
         }
     }
 
+    /**
+     * Removes the node at the specified index from the list.
+     *
+     * @param index the index of the node to remove
+     */
     fun remove(index: Int) {
         if (index < 0 || index > length) {
             println("Index Out Of Bounds For Length $length")
@@ -71,6 +100,12 @@ class LinkedList(value: Int) {
         }
     }
 
+    /**
+     * Reverses the order of nodes in the list.
+     *
+     * @param linkedList the list to be reversed
+     * @return a new reversed LinkedList
+     */
     fun reverse(linkedList: LinkedList): LinkedList {
         val newList = LinkedList(linkedList.head!!.value)
         var current: Node? = linkedList.head
@@ -86,24 +121,25 @@ class LinkedList(value: Int) {
 }
 
 fun main() {
+
     val myLinkedList = LinkedList(10)
-    //appending
+
     myLinkedList.append(12)
     myLinkedList.append(16)
-    //prepending
+
     myLinkedList.prepend(20)
     myLinkedList.prepend(50)
-    println("length: " + myLinkedList.length)
-    println("list: " + myLinkedList.printList().contentToString())
-    //inserting
+    println("Length: " + myLinkedList.length)
+    println("List: " + myLinkedList.printList().contentToString())
+
     myLinkedList.insert(2, 25)
-    println("length: " + myLinkedList.length)
-    println("list: " + myLinkedList.printList().contentToString())
-    //removing
+    println("Length: " + myLinkedList.length)
+    println("List: " + myLinkedList.printList().contentToString())
+
     myLinkedList.remove(4)
-    println("length: " + myLinkedList.length)
-    println("list: " + myLinkedList.printList().contentToString())
-    //reversing
+    println("Length: " + myLinkedList.length)
+    println("List: " + myLinkedList.printList().contentToString())
+
     val linkedList2 = myLinkedList.reverse(myLinkedList)
-    println("reverse linkedList" + linkedList2.printList().contentToString())
+    println("Reversed linked list: " + linkedList2.printList().contentToString())
 }
