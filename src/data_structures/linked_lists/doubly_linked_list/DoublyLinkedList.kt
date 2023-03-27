@@ -1,10 +1,18 @@
 package data_structures.linked_lists.doubly_linked_list
 
+/**
+ * Implementation of a doubly linked list data structure with basic operations.
+ */
 class DoublyLinkedList(value: Int) {
     var head: Node? = Node(value)
     var tail: Node? = head
     var length: Int = 1
 
+    /**
+     * Append a new element to the end of the list.
+     *
+     * @param value the value to be added to the list
+     */
     fun append(value: Int) {
         val newNode = Node(value)
         newNode.previous = tail
@@ -13,6 +21,11 @@ class DoublyLinkedList(value: Int) {
         length++
     }
 
+    /**
+     * Prepend a new element to the beginning of the list.
+     *
+     * @param value the value to be added to the list
+     */
     fun prepend(value: Int) {
         val newNode = Node(value)
         head?.previous = newNode
@@ -21,6 +34,11 @@ class DoublyLinkedList(value: Int) {
         length++
     }
 
+    /**
+     * Print the values of the elements in the list as an IntArray.
+     *
+     * @return an IntArray representing the values of the elements in the list
+     */
     fun printList(): IntArray {
         val myList = IntArray(length)
         var current: Node? = head
@@ -33,6 +51,12 @@ class DoublyLinkedList(value: Int) {
         return myList
     }
 
+    /**
+     * Insert a new element at the specified index in the list.
+     *
+     * @param index the index at which to insert the new element
+     * @param value the value to be inserted into the list
+     */
     fun insert(index: Int, value: Int) {
         if (index < 0 || index > length) {
             println("Index Out Of Bounds For Length $length")
@@ -54,6 +78,11 @@ class DoublyLinkedList(value: Int) {
         }
     }
 
+    /**
+     * Remove the element at the specified index from the list.
+     *
+     * @param index the index of the element to be removed from the list
+     */
     fun remove(index: Int) {
         if (index < 0 || index > length) {
             println("Index Out Of Bounds For Length $length")
@@ -80,16 +109,21 @@ class DoublyLinkedList(value: Int) {
 }
 
 fun main() {
+
     val myDoublyLinkedList = DoublyLinkedList(5)
+
     myDoublyLinkedList.append(3)
     myDoublyLinkedList.append(4)
     myDoublyLinkedList.prepend(2)
     myDoublyLinkedList.prepend(1)
     println(myDoublyLinkedList.printList().contentToString())
+
     myDoublyLinkedList.remove(0)
     println(myDoublyLinkedList.printList().contentToString())
+
     myDoublyLinkedList.insert(2, 200)
     println(myDoublyLinkedList.printList().contentToString())
+
     println("length: " + myDoublyLinkedList.length)
     println("head value: " + myDoublyLinkedList.head?.value)
     println("head.previous: " + myDoublyLinkedList.head?.previous)
