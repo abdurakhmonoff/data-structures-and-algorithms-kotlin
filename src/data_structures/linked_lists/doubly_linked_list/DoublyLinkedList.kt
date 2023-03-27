@@ -9,7 +9,7 @@ class DoublyLinkedList(value: Int) {
     var length: Int = 1
 
     /**
-     * Append a new element to the end of the list.
+     * Append a new node to the end of the list.
      *
      * @param value the value to be added to the list
      */
@@ -22,7 +22,7 @@ class DoublyLinkedList(value: Int) {
     }
 
     /**
-     * Prepend a new element to the beginning of the list.
+     * Prepend a new node to the beginning of the list.
      *
      * @param value the value to be added to the list
      */
@@ -35,9 +35,9 @@ class DoublyLinkedList(value: Int) {
     }
 
     /**
-     * Print the values of the elements in the list as an IntArray.
+     * Print the values of the nodes in the list as an IntArray.
      *
-     * @return an IntArray representing the values of the elements in the list
+     * @return an IntArray representing the values of the nodes in the list
      */
     fun printList(): IntArray {
         val myList = IntArray(length)
@@ -52,9 +52,9 @@ class DoublyLinkedList(value: Int) {
     }
 
     /**
-     * Insert a new element at the specified index in the list.
+     * Insert a new node at the specified index in the list.
      *
-     * @param index the index at which to insert the new element
+     * @param index the index at which to insert the new node
      * @param value the value to be inserted into the list
      */
     fun insert(index: Int, value: Int) {
@@ -79,9 +79,9 @@ class DoublyLinkedList(value: Int) {
     }
 
     /**
-     * Remove the element at the specified index from the list.
+     * Remove the node at the specified index from the list.
      *
-     * @param index the index of the element to be removed from the list
+     * @param index the index of the node to be removed from the list
      */
     fun remove(index: Int) {
         if (index < 0 || index > length) {
