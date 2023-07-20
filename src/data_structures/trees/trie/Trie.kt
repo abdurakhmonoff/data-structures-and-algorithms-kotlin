@@ -1,9 +1,18 @@
 package data_structures.trees.trie
 
+/**
+ * Simple implementation of a trie queue data structure.
+ *
+ * @property root The root node of the trie.
+ */
 class Trie {
     val root = Node()
 
-    // insert
+    /**
+     * Inserts a string into the trie.
+     *
+     * @param string The string to be inserted into the trie.
+     */
     fun insert(string: String) {
         var current: Node? = root
         for (ch in string.toCharArray()) {
@@ -13,7 +22,12 @@ class Trie {
         current!!.isWord = true
     }
 
-    // findWord
+    /**
+     * Searches for a complete word in the trie and returns true if found, otherwise false.
+     *
+     * @param string The word to be searched in the trie.
+     * @return True if the complete word is found, otherwise false.
+     */
     fun findWord(string: String): Boolean {
         var current: Node? = root
         for (ch in string.toCharArray()) {
@@ -26,7 +40,12 @@ class Trie {
         return current!!.isWord
     }
 
-    // delete
+    /**
+     * Deletes a word from the trie and returns true if the word was successfully deleted, otherwise false.
+     *
+     * @param word The word to be deleted from the trie.
+     * @return True if the word was successfully deleted, otherwise false.
+     */
     fun delete(word: String): Boolean {
         var current: Node? = root
         var deleteAfter: Node? = root
